@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+/*=======================
+ Reset CSS
+=========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 30px 'Pacifico', cursive;
+  color: blue;
+  background: #ddd;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/*==============================
+ Sass Advanced Media Query 
+===============================*/
+/* End Mixin */
+/*==================== 
+ Custom Media Query 
+======================*/
+/*================= 
+ Main Content 
+===================*/
+.box p {
+  margin: 200px auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* included mixin item */
+.box {
+  /* Large devices (desktops, 992px and up) */
+  /* Medium devices (tablets, 768px and up) */
+  /* Moblie devices (mobile, 0px to 768px) */
+  /* Wide Mobile Layout: 480px. */
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .box {
+    background: coral;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .box {
+    background: cornflowerblue;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .box {
+    background: purple;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .box {
+    background: #000;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1350px) {
+  .box {
+    background: #0D9CF6;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+/*=======================
+ Reset CSS
+=========================*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: normal 30px 'Pacifico', cursive;
+	color: blue;
+	background: #ddd;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	list-style: none;
+}
+
+/*==============================
+ Sass Advanced Media Query 
+===============================*/
+
+@mixin mq($value){
+
+	@if $value == 'medium' {
+			@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+	    		@content;
+			}/* Large devices (desktops, 992px and up) */
+
+	} @elseif
+		$value == 'tab' {
+			@media only screen and (min-width: 768px) and (max-width: 991px) { 
+			    @content;
+			} /* Medium devices (tablets, 768px and up) */
+		
+	} @elseif
+		$value == 'mobile' {
+			@media only screen and (max-width: 767px) { 
+			    @content;
+			} /* Moblie devices (mobile, 0px to 768px) */
+		
+	} @elseif
+		$value == 'widemobile' {
+			@media only screen and (min-width: 480px) and (max-width: 767px) { 
+				@content;
+			} /* Wide Mobile Layout: 480px. */
+	}
+
+} /* End Mixin */
+
+
+/*==================== 
+ Custom Media Query 
+======================*/
+
+@mixin cmq($min,$max){
+	@media only screen and (min-width: $min) and (max-width: $max){
+		@content;
+	}
+}
+
+/*================= 
+ Main Content 
+===================*/
+
+.box p{
+	margin: 200px auto;
+	text-align: center;
+	max-width: 500px;
+}
+
+/* included mixin item */
+
+.box{
+	@include mq(medium){
+		background: coral;
+	}
+	@include mq(tab){
+		background: cornflowerblue;
+	}
+	@include mq(mobile){
+		background: purple;
+	}
+	@include mq(widemobile){
+		background: #000;
+	}
+	@include cmq(1200px,1350px){
+		background: #0D9CF6;
+	}
+}
+
+
+
